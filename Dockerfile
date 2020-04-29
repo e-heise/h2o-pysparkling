@@ -24,6 +24,8 @@ pip install future && \
 pip install colorama && \
 pip install awscli
 
+RUN echo "c.NotebookApp.allow_root = True" >> /home/$NB_USER/.jupyter/jupyter_notebook_config.py
+
 WORKDIR /home/$NB_USER/work
 
 # see http://h2o-release.s3.amazonaws.com/sparkling-water/rel-2.2/7/index.html
